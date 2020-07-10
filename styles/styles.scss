@@ -1,0 +1,231 @@
+// variable declaration
+@import'./variables';
+
+
+//@mixin output lines of Sass code
+@mixin flexCenter($direction) {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  flex-direction : $direction;
+}
+
+// @function returns a single value of any Sass data
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+;
+
+body {
+  background : color(bgColor);
+  margin     : 0;
+  padding    : 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align : center;
+
+  a {
+    text-decoration: none;
+    color          : color(textDefault);
+  }
+
+  .main {
+    @include flexCenter(column);
+
+    .button__section,
+    .input__section {
+      @include flexCenter(row);
+
+      .container {
+        @include flexCenter(column);
+        align-items: flex-start;
+        padding    : 15px;
+      }
+    }
+  }
+}
+
+// button styling
+
+.container {
+  .btn {
+    border-radius: 99px;
+    margin       : 10px;
+    transition   : all .3s ease;
+    cursor       : pointer;
+
+    a {
+      @include flexCenter(row);
+    }
+  }
+
+  .btn-large {
+    padding: 10px 20px;
+
+    a {
+      font-weight: bold;
+      font-size  : 24px;
+      line-height: 36px;
+    }
+
+  }
+
+  .btn-small {
+    padding: 8px 16px;
+
+    a {
+      font-weight   : 600;
+      font-size     : 16px;
+      line-height   : 24px;
+      letter-spacing: 0.44px;
+    }
+
+  }
+
+  .btn-xSmall {
+    padding: 4px 20px;
+
+    a {
+      font-weight   : 500;
+      font-size     : 14px;
+      line-height   : 22px;
+      letter-spacing: 0.1px;
+    }
+
+  }
+
+  .btn-icon {
+    padding: 12px;
+  }
+
+  .btn-color--light {
+    background: color(lightGray);
+
+    &:hover {
+      background: color(lightGrayHover);
+    }
+  }
+
+  .btn-color--filled {
+    background: color(primaryBlue);
+
+    &:hover {
+      background: color(primaryBlueHover);
+    }
+  }
+
+  .btn-color--outlined {
+    background: color(white);
+    border    : 1px solid #2979FF;
+
+    &:hover {
+      background: color(primaryBlue);
+
+      a {
+        color: color(white);
+      }
+    }
+  }
+
+  .white-text {
+    color: color(white);
+  }
+
+  .blue-text {
+    color: color(textBlue);
+  }
+}
+
+
+// form styling
+.input__section {
+
+  form {
+
+    .form-group {
+      position: relative;
+      margin  : 20px;
+
+      label {
+        position      : absolute;
+        top           : 30%;
+        left          : 16px;
+        pointer-events: none;
+        color         : color(gray50);
+        letter-spacing: 0.44px;
+        font-size     : 20px;
+        transition    : .5s;
+      }
+
+      input {
+        box-shadow      : none;
+        outline         : none;
+        border          : none;
+        background-color: color(white);
+        width           : 100%;
+        box-sizing      : border-box;
+        border          : 1px solid #B4B4BB;
+        border-radius   : 10px;
+        padding         : 16px;
+        height          : 54px;
+        font-size       : 20px;
+
+
+        &:focus,
+        &:valid {
+          padding-top : 26px;
+          border-color: color(blue70);
+
+          ~label {
+            left     : 16px;
+            top      : 4px;
+            color    : color(blue70);
+            font-size: 12px;
+          }
+        }
+      }
+
+      //after defocusing form input
+      .defocus {
+
+        &:focus,
+        &:valid {
+          border-color: color(gray40);
+          ;
+
+          ~label {
+            color: color(gray40);
+          }
+        }
+      }
+
+      &--round{
+        label {
+          left: 24px;
+        }
+  
+        input {
+          border-radius: 99px;
+          padding-left : 24px;
+          overflow     : hidden;
+  
+          &:focus,
+          &:valid {
+            padding-top : 26px;
+            border-color: color(blue70);
+            ;
+  
+            ~label {
+              left      : 24px;
+              top       : -8px;
+              background: color(white);
+              color     : color(blue70);
+              font-size : 12px;
+              padding   : 0 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

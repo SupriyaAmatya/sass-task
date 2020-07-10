@@ -1,0 +1,241 @@
+body {
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+
+body a {
+  text-decoration: none;
+  color: #19191D;
+}
+
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .main .button__section,
+body .main .input__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .main .button__section .container,
+body .main .input__section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px;
+}
+
+.container .btn {
+  border-radius: 99px;
+  margin: 10px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.container .btn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .btn-large {
+  padding: 10px 20px;
+}
+
+.container .btn-large a {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.container .btn-small {
+  padding: 8px 16px;
+}
+
+.container .btn-small a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.44px;
+}
+
+.container .btn-xSmall {
+  padding: 4px 20px;
+}
+
+.container .btn-xSmall a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.1px;
+}
+
+.container .btn-icon {
+  padding: 12px;
+}
+
+.container .btn-color--light {
+  background: #E1E1E3;
+}
+
+.container .btn-color--light:hover {
+  background: #c1c1c2;
+}
+
+.container .btn-color--filled {
+  background: #2979FF;
+}
+
+.container .btn-color--filled:hover {
+  background: #2b70e7;
+}
+
+.container .btn-color--outlined {
+  background: #FFFFFF;
+  border: 1px solid #2979FF;
+}
+
+.container .btn-color--outlined:hover {
+  background: #2979FF;
+}
+
+.container .btn-color--outlined:hover a {
+  color: #FFFFFF;
+}
+
+.container .white-text {
+  color: #FFFFFF;
+}
+
+.container .blue-text {
+  color: #1B4EA3;
+}
+
+.input__section form .form-group {
+  position: relative;
+  margin: 20px;
+}
+
+.input__section form .form-group label {
+  position: absolute;
+  top: 30%;
+  left: 16px;
+  pointer-events: none;
+  color: #787885;
+  letter-spacing: 0.44px;
+  font-size: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.input__section form .form-group input {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border: none;
+  background-color: #FFFFFF;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #B4B4BB;
+  border-radius: 10px;
+  padding: 16px;
+  height: 54px;
+  font-size: 20px;
+}
+
+.input__section form .form-group input:focus, .input__section form .form-group input:valid {
+  padding-top: 26px;
+  border-color: #2264D1;
+}
+
+.input__section form .form-group input:focus ~ label, .input__section form .form-group input:valid ~ label {
+  left: 16px;
+  top: 4px;
+  color: #2264D1;
+  font-size: 12px;
+}
+
+.input__section form .form-group .defocus:focus, .input__section form .form-group .defocus:valid {
+  border-color: #9696A0;
+}
+
+.input__section form .form-group .defocus:focus ~ label, .input__section form .form-group .defocus:valid ~ label {
+  color: #9696A0;
+}
+
+.input__section form .form-group--round label {
+  left: 24px;
+}
+
+.input__section form .form-group--round input {
+  border-radius: 99px;
+  padding-left: 24px;
+  overflow: hidden;
+}
+
+.input__section form .form-group--round input:focus, .input__section form .form-group--round input:valid {
+  padding-top: 26px;
+  border-color: #2264D1;
+}
+
+.input__section form .form-group--round input:focus ~ label, .input__section form .form-group--round input:valid ~ label {
+  left: 24px;
+  top: -8px;
+  background: #FFFFFF;
+  color: #2264D1;
+  font-size: 12px;
+  padding: 0 4px;
+}
+/*# sourceMappingURL=styles.css.map */

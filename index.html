@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <h1>Working with Sass</h1>
+    <div class="main">
+        <div class="button__section">
+            <div class="container">
+                <div class="btn btn-large btn-color--light">
+                    <a href="#">Button M</a>
+                </div>
+                <div class="btn btn-small btn-color--light">
+                    <a href="#">Button S</a>
+                </div>
+                <div class="btn btn-xSmall btn-color--light">
+                    <a href="#">XSmall</a>
+                </div>
+                <div class="btn btn-icon btn-color--light">
+                    <a>
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5714 5.71423L26.2857 11.4285L11.4286 26.2857H5.71429V20.5714L20.5714 5.71423Z"
+                                stroke="#19191D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="btn btn-large btn-color--filled ">
+                    <a href="#" class="white-text">Button M</a>
+                </div>
+                <div class="btn btn-small btn-color--filled ">
+                    <a href="#" class="white-text">Button S</a>
+                </div>
+                <div class="btn btn-xSmall btn-color--filled ">
+                    <a href="#" class="white-text">XSmall</a>
+                </div>
+                <div class="btn btn-icon btn-color--filled">
+                    <a class="white-text">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5714 5.71423L26.2857 11.4285L11.4286 26.2857H5.71429V20.5714L20.5714 5.71423Z"
+                                stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="btn btn-large btn-color--outlined ">
+                    <a href="#" class="blue-text">Button M</a>
+                </div>
+                <div class="btn btn-small btn-color--outlined ">
+                    <a href="#" class="blue-text">Button S</a>
+                </div>
+                <div class="btn btn-xSmall btn-color--outlined ">
+                    <a href="#" class="blue-text">XSmall</a>
+                </div>
+                <div class="btn btn-icon btn-color--outlined">
+                    <a>
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5714 5.71423L26.2857 11.4285L11.4286 26.2857H5.71429V20.5714L20.5714 5.71423Z"
+                                stroke="#19191D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="input__section">
+            <div class="container">
+                <form id="form">
+                    <div class="form-group">
+                        <input type="text" required/>
+                        <label>Enter Name</label>
+                    </div>
+                    <div class="form-group form-group--round">
+                        <input type="text" required />
+                        <label>Enter Name</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const form = document.getElementById('form')
+
+    form.addEventListener('focusout', (event) => {
+        event.target.classList.add("defocus")
+    });
+    form.addEventListener('focusin', (event) => {
+        event.target.classList.remove("defocus")
+    });
+</script>
+
+</html>
